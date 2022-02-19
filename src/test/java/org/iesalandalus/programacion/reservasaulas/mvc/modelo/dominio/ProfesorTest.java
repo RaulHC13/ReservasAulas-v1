@@ -1,13 +1,15 @@
 package org.iesalandalus.programacion.reservasaulas.mvc.modelo.dominio;
 
-/*
-import static org.junit.Assert.*;
 
-import org.iesalandalus.programacion.reservasaulas.mvc.modelo.dominio.Profesor;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotEquals;
+import static org.junit.Assert.assertNull;
+import static org.junit.Assert.fail;
+
 import org.junit.Test;
-*/
+
 public class ProfesorTest {
-	/*
+	
 	private static final String ERROR_EXCEPCION = "Debería haber saltado la excepción.";
 	private static final String ERROR_NO_EXCEPCION = "No debería haber saltado la excepción.";
 	private static final String nombre = "José Ramón";
@@ -154,5 +156,5 @@ public class ProfesorTest {
 		assertEquals("nombre=José Ramón, correo=joseramon.jimenez@iesalandalus.org, telefono=950112233", profesorConTelefono.toString());
 		assertEquals("nombre=José Ramón, correo=joseramon.jimenez@iesalandalus.org", profesorSinTelefono.toString());
 	}
-*/
+
 }
