@@ -63,7 +63,7 @@ public class Profesores {
 			throw new NullPointerException("ERROR: No se puede buscar un profesor nulo.");
 		}
 		if (coleccionProfesores.contains(profesor)) {
-			System.out.println("Se ha encontrado el profesor en el índice " + coleccionProfesores.indexOf(profesor) + "  ");
+			System.out.println("Se ha encontrado el "  + profesor + " en el índice " + coleccionProfesores.indexOf(profesor) + "  ");
 			return new Profesor(profesor);
 		}else {
 			System.out.println("No se ha encontrado el profesor.");

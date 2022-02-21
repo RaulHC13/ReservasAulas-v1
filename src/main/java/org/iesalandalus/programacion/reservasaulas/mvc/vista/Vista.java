@@ -1,5 +1,8 @@
 package org.iesalandalus.programacion.reservasaulas.mvc.vista;
 
+import java.util.Iterator;
+import java.util.List;
+
 import javax.naming.OperationNotSupportedException;
 
 import org.iesalandalus.programacion.reservasaulas.mvc.controlador.Controlador;
@@ -74,10 +77,12 @@ public class Vista {
 	public void listarAulas() {
 		Consola.mostrarCabecera("Listar aulas");
 		//Se crea un array de string y se llama al metodo para representar
-		String[] string = controlador.representarAulas();
-		if (string.length > 0) {
-			for (String aula : string) {
-				System.out.println(aula);
+		List<String> string = controlador.representarAulas();
+		Iterator<String> I = string.iterator();
+		if (string.size() > 0) {
+			for (string.iterator(); I.hasNext();) {
+				String string2 = I.next();
+				System.out.println(string2);
 			}
 		} else {
 			System.out.println("No hay ningún aula registrada.");
@@ -113,7 +118,6 @@ public class Vista {
 			Profesor profesorBuscar = Consola.leerProfesor();
 			controlador.buscarProfesor(profesorBuscar);
 			if (profesorBuscar != null) {
-				System.out.println("Se ha encontrado el profesor: " + profesorBuscar.toString());;
 			} else {
 				System.out.println("No se ha encontrado el profesor.");
 			}
@@ -124,13 +128,15 @@ public class Vista {
 	public void listarProfesores() {
 		Consola.mostrarCabecera("Listar profesores");
 		
-		String[] string = controlador.representarProfesores();
-		if (string.length > 0) {
-			for (String profesor : string) {
-				System.out.println(profesor);
+		List<String> string = controlador.representarProfesores();
+		Iterator<String> I = string.iterator();
+		if (string.size() > 0) {
+			for (string.iterator(); I.hasNext();) {
+				String string2 = I.next();
+				System.out.println(string2);
 			}
 		} else {
-			System.out.println("No hay ningún profesor registrada.");
+			System.out.println("No hay ningún profesor registrado.");
 		}
 	}
 	
@@ -171,10 +177,12 @@ public class Vista {
 	public void listarReservas() {
 		Consola.mostrarCabecera("Listar reservas");
 		
-		String[] string = controlador.representarReservas();
-		if (string.length > 0) {
-			for (String reservas : string) {
-				System.out.println(reservas);
+		List<String> string = controlador.representarReservas();
+		Iterator<String> I = string.iterator();
+		if (string.size() > 0) {
+			for (string.iterator(); I.hasNext();) {
+				String string2 = I.next();
+				System.out.println(string2);
 			}
 		} else {
 			System.out.println("No hay ningún aula registrada.");
@@ -185,11 +193,13 @@ public class Vista {
 		Consola.mostrarCabecera("Listar reservas por aula");
 		
 		Aula aulaReserva = Consola.leerAula();
-		Reserva[] reservas = controlador.getReservasAula(aulaReserva);
-		if (reservas.length > 0) {
-			for (Reserva reservas2 : reservas) {
-				if (reservas2 !=null) {
-					System.out.println(reservas2);
+		List<Reserva> reservas = controlador.getReservasAula(aulaReserva);
+		Iterator<Reserva> I = reservas.iterator();
+		if (reservas.size() > 0) {
+			for (reservas.iterator(); I.hasNext();) {
+				Reserva reserva = I.next();
+				if (reserva !=null) {
+					System.out.println(reserva);
 				}
 			}
 			
@@ -202,11 +212,13 @@ public class Vista {
 		Consola.mostrarCabecera("Listar reservas por profesor");
 		
 		Profesor profesor = Consola.leerProfesor();
-		Reserva[] reservas = controlador.getReservasProfesor(profesor);
-		if(reservas.length > 0) {
-			for (Reserva reserva4 : reservas) {
-				if (reserva4 != null) {
-					System.out.println(reserva4);
+		List<Reserva> reservas = controlador.getReservasProfesor(profesor);
+		Iterator<Reserva> I = reservas.iterator();
+		if(reservas.size() > 0) {
+			for (reservas.iterator(); I.hasNext();) {
+				Reserva reserva = I.next();
+				if (reserva != null) {
+					System.out.println(reserva);
 				}
 			}
 		} else {
@@ -217,11 +229,13 @@ public class Vista {
 		Consola.mostrarCabecera("Listar reservas por permanencia");
 		
 		Permanencia permanencia = new Permanencia(Consola.leerDia(), Consola.leerTramo());
-		Reserva[] reservas = controlador.getReservasPermanencia(permanencia);
-		if (reservas.length > 0) {
-			for (Reserva reserva6 : reservas) {
-				if (reserva6 != null) {
-					System.out.println(reserva6);
+		List<Reserva> reservas = controlador.getReservasPermanencia(permanencia);
+		Iterator<Reserva> I = reservas.iterator();
+		if(reservas.size() > 0) {
+			for (reservas.iterator(); I.hasNext();) {
+				Reserva reserva = I.next();
+				if (reserva != null) {
+					System.out.println(reserva);
 				}
 			}
 		} else {

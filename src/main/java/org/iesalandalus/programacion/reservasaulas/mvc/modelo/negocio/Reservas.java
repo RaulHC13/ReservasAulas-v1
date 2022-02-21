@@ -69,7 +69,7 @@ public class Reservas {
 			throw new NullPointerException("ERROR: No se puede buscar un reserva nula.");
 		}
 		if (coleccionReservas.contains(reserva)) {
-			System.out.println("Se ha encontrado la reserva en el índice " + coleccionReservas.indexOf(reserva) + "  ");
+			System.out.println("Se ha encontrado " + reserva + "en el índice " + coleccionReservas.indexOf(reserva) + "  ");
 			return new Reserva(reserva);
 		} else {
 			System.out.println("No se ha encontrado la reserva.");
@@ -161,9 +161,9 @@ public class Reservas {
 			for (Iterator<Reserva> I = getReservas().iterator(); I.hasNext();) {
 				
 				Reserva reserva = I.next();
-				if (reserva.getAula() == aula && reserva.getPermanencia() == permanencia) {
+				if (reserva.getAula().equals(aula)&& reserva.getPermanencia().equals(permanencia)) {
 					disponible = false;
-				}   disponible = true;
+				}  
 		}
 		return disponible;
 	}

@@ -63,7 +63,7 @@ public class Aulas {
 			throw new NullPointerException("ERROR: No se puede buscar un aula nula.");
 		}
 		if (coleccionAulas.contains(aula)) {
-			System.out.println("Se ha encontrado el aula en el índice " + coleccionAulas.indexOf(aula) + "  ");
+			System.out.println("Se ha encontrado el " + aula + " en el índice " + coleccionAulas.indexOf(aula) + "  ");
 			return new Aula(aula);
 		}else {
 			System.out.println("No se ha encontrado el aula.");
