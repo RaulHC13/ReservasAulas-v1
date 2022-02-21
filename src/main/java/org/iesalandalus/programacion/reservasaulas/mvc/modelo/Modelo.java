@@ -25,7 +25,7 @@ public class Modelo {
 		reservas = new Reservas();
 		
 	}
-	public List<Aula> getAulas() {
+	public List<Aula> getAulas() {//Se cambia de array a lista.
 			
 		return aulas.getAulas();
 	}

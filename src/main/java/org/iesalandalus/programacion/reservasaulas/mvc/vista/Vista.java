@@ -76,7 +76,7 @@ public class Vista {
 	}
 	public void listarAulas() {
 		Consola.mostrarCabecera("Listar aulas");
-		//Se crea un array de string y se llama al metodo para representar
+		//Se crea una lista de strings y se llama al metodo para representar.
 		List<String> string = controlador.representarAulas();
 		Iterator<String> I = string.iterator();
 		if (string.size() > 0) {
@@ -130,7 +130,7 @@ public class Vista {
 		
 		List<String> string = controlador.representarProfesores();
 		Iterator<String> I = string.iterator();
-		if (string.size() > 0) {
+		if (string.size() > 0) {//Si la lista tiene al menos un indice, lista profesores, si no, no lista.
 			for (string.iterator(); I.hasNext();) {
 				String string2 = I.next();
 				System.out.println(string2);

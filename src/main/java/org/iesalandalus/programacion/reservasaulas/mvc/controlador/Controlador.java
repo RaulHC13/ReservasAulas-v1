@@ -58,7 +58,7 @@ public class Controlador {
 		modelo.buscarProfesor(profesor);
 	}
 	
-	public List<String> representarAulas() {
+	public List<String> representarAulas() {//Hay que cambiar de array de string a lista de string.
 		return modelo.representarAulas();	
 	}
 	

@@ -49,6 +49,6 @@ public class Aula {
 	}
 	@Override
 	public String toString() {
-		return String.format("Aula: [Nombre=%s]", nombre);
+		return String.format("Aula: [Nombre= %s]", nombre);
 	}
 }

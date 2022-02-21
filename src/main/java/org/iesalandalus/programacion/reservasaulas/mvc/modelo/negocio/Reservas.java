@@ -107,9 +107,9 @@ public class Reservas {
 		
 		for (getReservas().iterator(); I.hasNext();) {
 			
-			Reserva reserva = I.next();
+			Reserva reserva = I.next();//Le va dando el valor del iterator a reserva
 			
-			if(reserva.getProfesor().equals(profesor)) {
+			if(reserva.getProfesor().equals(profesor)) {//Si el profesor coincide, añade una reserva a la lista que luego mostrará
 				reservas.add(new Reserva(reserva));
 			}
 		}
@@ -160,10 +160,10 @@ public class Reservas {
 		}
 			for (Iterator<Reserva> I = getReservas().iterator(); I.hasNext();) {
 				
-				Reserva reserva = I.next();
+				Reserva reserva = I.next();//Recorre la lista con iterator y le pasa valores a reserva.
 				if (reserva.getAula().equals(aula)&& reserva.getPermanencia().equals(permanencia)) {
 					disponible = false;
-				}  
+				}  //Si el aula y la permanencia introducidas coinciden con con las existentes en la lista, devuelve falso.
 		}
 		return disponible;
 	}

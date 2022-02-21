@@ -63,6 +63,6 @@ public class Permanencia {
 
 	@Override
 	public String toString() {
-		return String.format("Permanencia: [Dia=%s, Tramo=%s]", dia.format(FORMATO_DIA), tramo);
+		return String.format("Permanencia: [Dia= %s, Tramo= %s]", dia.format(FORMATO_DIA), tramo);
 	}//Se utiliza format en el toString para que devuelva la fecha con el formato adecuado.
 }
